@@ -1,0 +1,22 @@
+    <ng-template pTemplate="header">
+      <tr>
+        <th>Nombre</th>
+        <th>NIT</th>
+        <th>Dirección</th>
+        <th>Teléfono</th>
+        <th>Acciones</th>
+      </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-parqueadero>
+      <tr>
+        <td>{{ parqueadero.nombre }}</td>
+        <td>{{ parqueadero.nit }}</td>
+        <td>{{ parqueadero.direccion }}</td>
+        <td>{{ parqueadero.telefono }}</td>
+        <td>
+          <button (click)="seleccionarParqueadero(parqueadero)">Editar</button>
+          <button (click)="eliminarParqueadero(parqueadero.id)">Eliminar</button>
+        </td>
+      </tr>
+    </ng-template>
+  
